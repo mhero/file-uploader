@@ -42,7 +42,7 @@ public class RestApiController {
 	}
 
 	@CrossOrigin(origins = "http://localhost:3333")
-	@RequestMapping(value = "/download/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+	@RequestMapping(value = "{id}/download/", method = RequestMethod.GET, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
 	public ResponseEntity<Resource> download(@PathVariable(value = "id") Long id, HttpServletRequest request) {
 		return documentService.findOne(id);
 	}
