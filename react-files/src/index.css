@@ -24,35 +24,24 @@ body {
     width: 100%;
 }
 
-.mde-help {
-    display: none;
-}
-
-.mde-header {
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.li {
-    float: left;
-    padding-left: 1.3em;
-}
-
-.li:before {
-    content: "\1F4D6";
-    /* FontAwesome Unicode */
-    font-family: FontAwesome;
+.ok {
+    color: blue;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    margin-left: -1.3em;
-    /* same as padding-left set on li */
-    width: 1.3em;
-    /* same as padding-left set on li */
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .button {

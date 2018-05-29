@@ -7,13 +7,16 @@ export class MyUploader extends React.Component {
         super(props);
 
         this.state = {
-            selectedFile: null
+            selectedFile: null,
+            message: null,
+            meesageClass: null
         };
 
     }
 
     fileUploadHanlder = () => {
-        Action.uploadNewFile(this.state.selectedFile);
+        let self = this;
+        Action.uploadNewFile(self);
     }
 
     fileSelectedHandler = event => {
@@ -25,8 +28,9 @@ export class MyUploader extends React.Component {
     render() {
         return ( 
             <div className = "container">
-                <input type = "file" onChange = {this.fileSelectedHandler}/>
-                <button onClick = {this.fileUploadHanlder}>Upload</button>
+                <input className="title" type = "file" onChange = { this.fileSelectedHandler }/>
+                <button className="button" onClick = { this.fileUploadHanlder }>Upload</button><br/>
+                <label className={ this.state.meesageClass }>{ this.state.message }</label>
             </div>
         );
     }
