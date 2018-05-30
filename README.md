@@ -5,6 +5,7 @@
     - document/upload
     - document/download
   - CORS enabled for http://localhost:3333
+  - file size 10MB max
   - run on port 8080
   - curl request
     - curl -F "file=@/folder/file.txt"   http://localhost:8080/document/upload
